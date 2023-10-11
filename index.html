@@ -21,6 +21,7 @@
       rel="stylesheet"
     />
 
+
     <!-- style css -->
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -61,10 +62,13 @@
                 <a class="nav-link text-white" href="#how-it-works"> How it Works </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white btn btn-danger" href="#">
-                  Learn More
-                </a>
+                  <a class="nav-link text-white btn btn-danger"
+                     href="#scheduleDemoSection"
+                     onclick="Calendly.initPopupWidget({url: 'https://calendly.com/reset-health-llc'});return false;">
+                     Learn More
+                  </a>
               </li>
+
             </ul>
           </div>
         </div>
@@ -265,16 +269,19 @@
           </div>
         </div>
 
-        <div class="text-center mt-5 position-relative">
-          <img src="img/contact.png" class="img-fluid contact-img" alt="" />
-          <a
-            href="mailto:hello@launchreset.com"
-            class="btn btn-danger fw-bold text-white px-5 py-2 contact-btn"
-          >
-            Contact Us
-          </a>
-
+        <div class="text-center mt-5 position-relative" id="scheduleDemoSection">
+            <img src="img/contact.png" class="img-fluid contact-img" alt="" />
+            <a
+               href="javascript:;"
+               onclick="Calendly.initPopupWidget({url: 'https://calendly.com/reset-health-llc'});return false;"
+               class="btn btn-danger fw-bold text-white px-5 py-2 contact-btn">
+               Schedule a Demo
+            </a>
+            <!-- Calendly widget scripts and styles -->
+            <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+            <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
         </div>
+
       </div>
     </section>
     <!-- approach -->
